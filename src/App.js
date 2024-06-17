@@ -1,16 +1,16 @@
-import PasswordInput from "./PasswordInput";
-import Password from "./Password";
+import React, { useRef } from 'react';
+import track1 from './track1.mp3';
 
-// : React.FC
-
-// <PasswordInput label="Enter Password:" />
 const App = () => {
+  const audioRef = useRef(null);
+  // React.useEffect(() => {
+  //   audioRef.current.play();// This play code is not working
+  // }, []);
   return (
     <div>
-      <h1>Password Input Example</h1>
-      <Password label="Enter your password"/>
+    <audio src={track1} ref={audioRef} />
     </div>
-  );
-};
+  )
+}
 
 export default App;
